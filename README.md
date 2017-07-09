@@ -15,10 +15,10 @@
 下载
 ------------------------------------
 
-使用git从[LessOrMore](https://github.com/luoyan35714/LessOrMore.git)主页下载项目
+使用git从[LessOrMore](https://github.com/khtkjeg/khtkjeg.github.io.git)主页下载项目
 
 ``` bash
-git clone https://github.com/luoyan35714/LessOrMore.git
+git clone https://github.com/khtkjeg/khtkjeg.github.io.git
 ```
 
 配置
@@ -92,24 +92,3 @@ jekyll server
 虽然设计好看的主题很多。但是真正适合拿来做博客的却不多。中间一直没有找到合适的主题。直到有一天看到Less官网的主题之后，豁然觉得这就是我的博客想要的样子。简单而又不平凡。所以就决定了要把博客迁移到这个主题，然后拿了两天晚上来把这个主题做出来。
 
 重复造了轮子，但是这个是迄今为止自己觉得最适合我的博客的轮子，所以是值得的！
-
-关于作者
-====================================
-
-热爱开源，热爱折腾的Java程序猿。更多个人信息和联系方式可以参照[我的简介](http://www.hifreud.com/Resume.io/)。
-
-关于打赏
-====================================
-
-如果你也像我一样在寻觅一个简洁的博客主题。不妨试下LessOrMore。
-
-当然你也可以为了我的工作打赏！以激励我做出更好的东西。
-
-支付宝
-----------------
-
-<img src="/styles/images/zhifubao.PNG" alt="支付宝二维码付款给Freud" width="310" />
-
-微信
-----------------
-![微信二维码付款给Freud](/styles/images/weixin.png)
