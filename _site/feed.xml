@@ -5,8 +5,8 @@
     <description>Actually, less is more!</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Jul 2017 21:57:26 +0800</pubDate>
-    <lastBuildDate>Sun, 09 Jul 2017 21:57:26 +0800</lastBuildDate>
+    <pubDate>Sun, 09 Jul 2017 22:00:35 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Jul 2017 22:00:35 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -41,11 +41,11 @@
 
 &lt;p&gt;由于云跟帖跟多说有一些小区别。对多说来说，安装完成之后，注册站点跟实际使用域名并没有硬性的要求必须一致，所以写完之后无论在什么地方都可以执行，而网易的这个云跟帖不同的是，会在每次页面加载的时候先获取当前访问的域名，然后跟你注册云跟帖时候的域名做检查，一致的话会放行并正确显示评论系统，不一致就会直接返回错误码，并且在页面不会显示任何内容。&lt;/p&gt;
 
-&lt;p&gt;所以，以后想要使用本Jekyll模板的小盆友们，&lt;code&gt;一定要记得修改自己的云跟帖导入代码&lt;/code&gt;，才能让自己博客的评论系统生效。具体步骤如下：&lt;/p&gt;
+&lt;p&gt;所以，以后想要使用本Jekyll模板的小盆友们，&lt;code class=&quot;highlighter-rouge&quot;&gt;一定要记得修改自己的云跟帖导入代码&lt;/code&gt;，才能让自己博客的评论系统生效。具体步骤如下：&lt;/p&gt;
 
 &lt;h2 id=&quot;登录云跟帖&quot;&gt;登录云跟帖&lt;/h2&gt;
 
-&lt;p&gt;使用自己的账号登录&lt;a href=&quot;https://gentie.163.com/&quot;&gt;https://gentie.163.com/&lt;/a&gt;，然后点击右上角的&lt;code&gt;后台管理&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用自己的账号登录&lt;a href=&quot;https://gentie.163.com/&quot;&gt;https://gentie.163.com/&lt;/a&gt;，然后点击右上角的&lt;code class=&quot;highlighter-rouge&quot;&gt;后台管理&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/yungentie/01.png&quot; alt=&quot;/styles/images/yungentie/01.png&quot; /&gt;&lt;/p&gt;
 
@@ -55,19 +55,19 @@
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/yungentie/02.png&quot; alt=&quot;/styles/images/yungentie/01.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;完成之后点击&lt;code&gt;获取代码&lt;/code&gt;，选择合适的皮肤进行设置，本博客是蓝色，固定位置。&lt;/p&gt;
+&lt;p&gt;完成之后点击&lt;code class=&quot;highlighter-rouge&quot;&gt;获取代码&lt;/code&gt;，选择合适的皮肤进行设置，本博客是蓝色，固定位置。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/yungentie/03.png&quot; alt=&quot;/styles/images/yungentie/01.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;复制引入代码&quot;&gt;复制引入代码&lt;/h2&gt;
 
-&lt;p&gt;点击&lt;code&gt;WEB代码&lt;/code&gt;, 在右侧的&lt;code&gt;跟贴完整模块代码(Web单独版)&lt;/code&gt;中复制展示框中的代码&lt;/p&gt;
+&lt;p&gt;点击&lt;code class=&quot;highlighter-rouge&quot;&gt;WEB代码&lt;/code&gt;, 在右侧的&lt;code class=&quot;highlighter-rouge&quot;&gt;跟贴完整模块代码(Web单独版)&lt;/code&gt;中复制展示框中的代码&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/yungentie/04.png&quot; alt=&quot;/styles/images/yungentie/01.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;修改模板代码&quot;&gt;修改模板代码&lt;/h2&gt;
 
-&lt;p&gt;修改&lt;code&gt;_includes/LessOrMore/comments-providers/yungentie&lt;/code&gt;文件中的内容，将文件中的代码全部删除，并粘贴刚刚从云跟帖网站复制的代码。&lt;/p&gt;
+&lt;p&gt;修改&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/LessOrMore/comments-providers/yungentie&lt;/code&gt;文件中的内容，将文件中的代码全部删除，并粘贴刚刚从云跟帖网站复制的代码。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/yungentie/05.png&quot; alt=&quot;/styles/images/yungentie/01.png&quot; /&gt;&lt;/p&gt;
 </description>
@@ -108,7 +108,7 @@
   &lt;li&gt;感谢&lt;a href=&quot;http://lesscss.cn/&quot;&gt;Less官网&lt;/a&gt;的样式，本Jekyll框架的样式都是基于Less官网的样式直接拷贝过来的。只是重构了JS，并且加入了Jekyll语法而已。&lt;/li&gt;
   &lt;li&gt;感谢&lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;提供的代码维护和发布平台&lt;/li&gt;
   &lt;li&gt;感谢&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;团队做出如此优秀的产品&lt;/li&gt;
-  &lt;li&gt;感谢&lt;a href=&quot;https://github.com/mattvh/solar-theme-jekyll&quot;&gt;Solar&lt;/a&gt;的原作者&lt;a href=&quot;http://www.webmaster-source.com/&quot;&gt;Matt Harzewski&lt;/a&gt;，在&lt;code&gt;2014.11&lt;/code&gt;-&lt;code&gt;2016.09&lt;/code&gt;的两年间，我的博客选用了此样式模版&lt;/li&gt;
+  &lt;li&gt;感谢&lt;a href=&quot;https://github.com/mattvh/solar-theme-jekyll&quot;&gt;Solar&lt;/a&gt;的原作者&lt;a href=&quot;http://www.webmaster-source.com/&quot;&gt;Matt Harzewski&lt;/a&gt;，在&lt;code class=&quot;highlighter-rouge&quot;&gt;2014.11&lt;/code&gt;-&lt;code class=&quot;highlighter-rouge&quot;&gt;2016.09&lt;/code&gt;的两年间，我的博客选用了此样式模版&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;使用&quot;&gt;使用&lt;/h1&gt;
@@ -121,18 +121,18 @@
 
 &lt;h2 id=&quot;配置&quot;&gt;配置&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;LessOrMore&lt;/code&gt;项目需要配置的只有一个文件&lt;code&gt;_config.yml&lt;/code&gt;，打开之后按照如下进行配置。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;LessOrMore&lt;/code&gt;项目需要配置的只有一个文件&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;，打开之后按照如下进行配置。&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;特别注意&lt;code&gt;baseurl&lt;/code&gt;的配置。如果是&lt;code&gt;***.github.io&lt;/code&gt;项目，不修改为空’‘的话，会导致JS,CSS等静态资源无法找到的错误&lt;/p&gt;
+  &lt;p&gt;特别注意&lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt;的配置。如果是&lt;code class=&quot;highlighter-rouge&quot;&gt;***.github.io&lt;/code&gt;项目，不修改为空’‘的话，会导致JS,CSS等静态资源无法找到的错误&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;name: 博客名称
 email: 邮箱地址
 author: 作者名
 url: 个人网站
-### baseurl修改为项目名，如果项目是&amp;#39;***.github.io&amp;#39;，则设置为空&amp;#39;&amp;#39;
-baseurl: &amp;quot;/LessOrMore&amp;quot;
+&lt;span class=&quot;c&quot;&gt;### baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''&lt;/span&gt;
+baseurl: &lt;span class=&quot;s2&quot;&gt;&quot;/LessOrMore&quot;&lt;/span&gt;
 resume_site: 个人简历网站
 github: github地址
 github_username: github用户名称
@@ -146,22 +146,22 @@ FB:
 
 &lt;h2 id=&quot;如何写文章&quot;&gt;如何写文章&lt;/h2&gt;
 
-&lt;p&gt;在&lt;code&gt;LessOrMore/_posts&lt;/code&gt;目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的&lt;code&gt;titile&lt;/code&gt;,&lt;code&gt;date&lt;/code&gt;,&lt;code&gt;categories&lt;/code&gt;,&lt;code&gt;tag&lt;/code&gt;的相关信息，添加&lt;code&gt;* content {:toc}&lt;/code&gt;为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。&lt;/p&gt;
+&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;LessOrMore/_posts&lt;/code&gt;目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的&lt;code class=&quot;highlighter-rouge&quot;&gt;titile&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;categories&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;tag&lt;/code&gt;的相关信息，添加&lt;code class=&quot;highlighter-rouge&quot;&gt;* content {:toc}&lt;/code&gt;为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;---
 layout: post
-#标题配置
+&lt;span class=&quot;c&quot;&gt;#标题配置&lt;/span&gt;
 title:  标题
-#时间配置
+&lt;span class=&quot;c&quot;&gt;#时间配置&lt;/span&gt;
 date:   2016-08-27 01:08:00 +0800
-#大类配置
+&lt;span class=&quot;c&quot;&gt;#大类配置&lt;/span&gt;
 categories: document
-#小类配置
+&lt;span class=&quot;c&quot;&gt;#小类配置&lt;/span&gt;
 tag: 教程
 ---
 
-* content
-{:toc}
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; content
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;:toc&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 
 我是正文。我是正文。我是正文。我是正文。我是正文。我是正文。&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -171,7 +171,7 @@ tag: 教程
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jekyll server&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;效果&quot;&gt;效果&lt;/h2&gt;
-&lt;p&gt;打开浏览器并输入URL&lt;code&gt;http://localhost:4000/&lt;/code&gt;,回车。&lt;/p&gt;
+&lt;p&gt;打开浏览器并输入URL&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000/&lt;/code&gt;,回车。&lt;/p&gt;
 
 &lt;h1 id=&quot;为什么重复造轮子&quot;&gt;为什么重复造轮子&lt;/h1&gt;
 

@@ -234,7 +234,7 @@
   <li>感谢<a href="http://lesscss.cn/">Less官网</a>的样式，本Jekyll框架的样式都是基于Less官网的样式直接拷贝过来的。只是重构了JS，并且加入了Jekyll语法而已。</li>
   <li>感谢<a href="https://github.com/">Github</a>提供的代码维护和发布平台</li>
   <li>感谢<a href="https://jekyllrb.com/">Jekyll</a>团队做出如此优秀的产品</li>
-  <li>感谢<a href="https://github.com/mattvh/solar-theme-jekyll">Solar</a>的原作者<a href="http://www.webmaster-source.com/">Matt Harzewski</a>，在<code>2014.11</code>-<code>2016.09</code>的两年间，我的博客选用了此样式模版</li>
+  <li>感谢<a href="https://github.com/mattvh/solar-theme-jekyll">Solar</a>的原作者<a href="http://www.webmaster-source.com/">Matt Harzewski</a>，在<code class="highlighter-rouge">2014.11</code>-<code class="highlighter-rouge">2016.09</code>的两年间，我的博客选用了此样式模版</li>
 </ul>
 
 <h1 id="使用">使用</h1>
@@ -247,18 +247,18 @@
 
 <h2 id="配置">配置</h2>
 
-<p><code>LessOrMore</code>项目需要配置的只有一个文件<code>_config.yml</code>，打开之后按照如下进行配置。</p>
+<p><code class="highlighter-rouge">LessOrMore</code>项目需要配置的只有一个文件<code class="highlighter-rouge">_config.yml</code>，打开之后按照如下进行配置。</p>
 
 <blockquote>
-  <p>特别注意<code>baseurl</code>的配置。如果是<code>***.github.io</code>项目，不修改为空’‘的话，会导致JS,CSS等静态资源无法找到的错误</p>
+  <p>特别注意<code class="highlighter-rouge">baseurl</code>的配置。如果是<code class="highlighter-rouge">***.github.io</code>项目，不修改为空’‘的话，会导致JS,CSS等静态资源无法找到的错误</p>
 </blockquote>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">name: 博客名称
 email: 邮箱地址
 author: 作者名
 url: 个人网站
-### baseurl修改为项目名，如果项目是&#39;***.github.io&#39;，则设置为空&#39;&#39;
-baseurl: &quot;/LessOrMore&quot;
+<span class="c">### baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''</span>
+baseurl: <span class="s2">"/LessOrMore"</span>
 resume_site: 个人简历网站
 github: github地址
 github_username: github用户名称
@@ -272,22 +272,22 @@ FB:
 
 <h2 id="如何写文章">如何写文章</h2>
 
-<p>在<code>LessOrMore/_posts</code>目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的<code>titile</code>,<code>date</code>,<code>categories</code>,<code>tag</code>的相关信息，添加<code>* content {:toc}</code>为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。</p>
+<p>在<code class="highlighter-rouge">LessOrMore/_posts</code>目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的<code class="highlighter-rouge">titile</code>,<code class="highlighter-rouge">date</code>,<code class="highlighter-rouge">categories</code>,<code class="highlighter-rouge">tag</code>的相关信息，添加<code class="highlighter-rouge">* content {:toc}</code>为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">---
 layout: post
-#标题配置
+<span class="c">#标题配置</span>
 title:  标题
-#时间配置
+<span class="c">#时间配置</span>
 date:   2016-08-27 01:08:00 +0800
-#大类配置
+<span class="c">#大类配置</span>
 categories: document
-#小类配置
+<span class="c">#小类配置</span>
 tag: 教程
 ---
 
-* content
-{:toc}
+<span class="k">*</span> content
+<span class="o">{</span>:toc<span class="o">}</span>
 
 
 我是正文。我是正文。我是正文。我是正文。我是正文。我是正文。</code></pre></figure>
@@ -297,7 +297,7 @@ tag: 教程
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">jekyll server</code></pre></figure>
 
 <h2 id="效果">效果</h2>
-<p>打开浏览器并输入URL<code>http://localhost:4000/</code>,回车。</p>
+<p>打开浏览器并输入URL<code class="highlighter-rouge">http://localhost:4000/</code>,回车。</p>
 
 <h1 id="为什么重复造轮子">为什么重复造轮子</h1>
 
