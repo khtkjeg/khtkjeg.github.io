@@ -1,8 +1,0 @@
-main()
-{
-	print(2313);
-}
-init()
-{
-	main();
-}
