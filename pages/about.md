@@ -2,13 +2,13 @@
 layout: page
 title: About
 description: 打码改变世界
-keywords: Ming Lu, 路明
+keywords: Zhuang Ma, 马壮
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是路明，码而生，码而立。
+我是马壮，码而生，码而立。
 
 仰慕「优雅编码的艺术」。
 
