@@ -1,27 +1,19 @@
 - sitename: GitHub
-  name: mzlogin
-  url: https://github.com/mzlogin
+  name: khtkjeg
+  url: https://github.com/khtkjeg
 
-- sitename: 掘金
-  name: mzlogin
-  url: http://gold.xitu.io/user/570ddaeb2e958a005c63b2da
-
-- sitename: LinkedIn
-  name: mazhuang
-  url: https://www.linkedin.com/in/mazhuang
+- sitename: 新浪
+  name: khtjeg
+  url: http://blog.sina.com.cn/khtkjeg
 
 - sitename: 博客
-  name: 码志
-  url: http://mazhuang.org
-
-- sitename: 微博
-  name: mzlogin
-  url: http://weibo.com/mzlogin
+  name: khtkjeg
+  url: https://github.com/khtkjeg
 
 - sitename: 知乎
-  name: mzlogin
+  name: khtkjeg
   url: http://www.zhihu.com/people/mzlogin
 
 - sitename: 豆瓣
-  name: 壮哥不胖
+  name: khtkjeg
   url: http://www.douban.com/people/freedim
