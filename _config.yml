@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mazhuang.org
+url: https://khtkjeg.github.io
 date_format: "ordinal"
 title: 码志
 subtitle: "打码改变人生"
-description: "马壮的个人博客"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+description: "路明的个人博客"
+keywords: 路明, Ming Lu, mzlogin, mazhuang
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -19,8 +19,8 @@ side_bar_repo_limit: 5
 author: Zhuang Ma
 organization: zkh360.com
 organization_url: http://www.zkh360.com
-github_username: mzlogin
-location: Wuhan, China
+github_username: khtkjeg
+location: Tianjin, China
 email: chumpma@gmail.com
 
 # ---------------- #
