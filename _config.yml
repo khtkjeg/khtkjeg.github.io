@@ -4,10 +4,10 @@
 baseurl:
 url: https://khtkjeg.github.io
 date_format: "ordinal"
-title: 码志
+title: 路明个人博客
 subtitle: "打码改变人生"
 description: "路明的个人博客"
-keywords: 路明, Ming Lu, mzlogin, mazhuang
+keywords: 路明, Ming Lu, khtkjeg, luming
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -16,12 +16,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
-organization: zkh360.com
-organization_url: http://www.zkh360.com
+author: Ming Lu
+organization: blog.sina.com.cn
+organization_url: http://blog.sina.com.cn/khtkjeg
 github_username: khtkjeg
 location: Tianjin, China
-email: chumpma@gmail.com
+email: lu.ming88888@163.com
 
 # ---------------- #
 #    Navigation    #
