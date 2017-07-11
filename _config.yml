@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url:khtkjeg.github.io
+url: http://mazhuang.org
 date_format: "ordinal"
 title: 码志
 subtitle: "打码改变人生"
