@@ -2,7 +2,11 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
+<<<<<<< HEAD
 url: http://mazhuang.org
+=======
+url:
+>>>>>>> 793f58610251f115a9e31366757f52a1b810eecd
 date_format: "ordinal"
 title: 码志
 subtitle: "打码改变人生"
