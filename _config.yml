@@ -1,8 +1,8 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:https://khtkjeg.github.io
-url:https://khtkjeg.github.io
+baseurl:
+url:khtkjeg.github.io
 date_format: "ordinal"
 title: 码志
 subtitle: "打码改变人生"
