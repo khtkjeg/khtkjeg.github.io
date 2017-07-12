@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Ming Lu
-organization: blog.sina.com.cn/khtkjeg
+organization: blog.sina
 organization_url: http://blog.sina.com.cn/khtkjeg
 github_username: khtkjeg
 location: Tianjin, China
@@ -78,7 +78,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+repository: khtjeg/khtjeg.github.io
 
 # ---------------- #
 #      Comments    #
