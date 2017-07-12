@@ -1,19 +1,27 @@
-- name: Software Engineer Keywords
+- name: 开发语言
   keywords:
       - Java
-      - C++
+      - C/C++
+      - C#
+      - html5/css/js
+      - PHP
       - Python
-      - Design Patterns
+      - sql
 
-- name: Mobile Developer Keywords
+- name: 前沿工具技术
   keywords:
-      - Android
-      - Reverse Engineering
+      - Docker
+      - Git/SVN
+      - Hbase/Mysql/MongoDb/Oracle/ActorDb/Redis 
+      - Kafka
+      - flume
 
-- name: Windows Developer Keywords
+- name: 开发框架
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - restful API
+      - Nodejs
+      - Vue.js
+      - Webpack
+      - jquery
+      - bootstrap
+      
