@@ -17,8 +17,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Ming Lu
-organization: zkh360.com
-organization_url: http://www.zkh360.com
+organization: blog.sina.com.cn/khtkjeg
+organization_url: http://blog.sina.com.cn/khtkjeg
 github_username: khtkjeg
 location: Tianjin, China
 email: lu.ming88888@163.com
@@ -89,13 +89,13 @@ comments_provider: gitment
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: mzlogin
+    username: khtkjeg
 # https://gentie.163.com
 netease_gentie:
     productKey: 560ed243b708465d82d5a0a5f3b83da1
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
+    owner: khtkjeg
     repo: blog-comments
     oauth:
         client_id: d2e1cbbd298958076462
