@@ -58,7 +58,7 @@ keywords: javascript
 	    }       
 	}
 	```
-	4. 删除倒计时对象中的定时器对象
+4. 删除倒计时对象中的定时器对象
 
 	```
 	Ticts.prototype.deleteTicts = function(id) {
