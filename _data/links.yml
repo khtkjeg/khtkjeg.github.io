@@ -1,6 +1,9 @@
 - name: 阮一峰javascript学习书籍
   url: http://javascript.ruanyifeng.com/
 
+- name: 阮一峰ES6学习书籍
+  url: http://es6.ruanyifeng.com/ 
+
 - name: 极客学院
   url: http://www.jikexueyuan.com/
 
