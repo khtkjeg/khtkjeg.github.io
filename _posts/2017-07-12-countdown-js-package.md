@@ -28,7 +28,7 @@ Ticts.prototype.deleteTicts = function(id) {
 {% endhighlight %}
 3、通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
 
-```
+```viml
 Ticts.prototype.createTicts=function(id,endtime){
     var ticts=this;
     var now = new Date();
