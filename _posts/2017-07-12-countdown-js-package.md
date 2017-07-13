@@ -10,7 +10,7 @@ keywords: javascript
 
 ## 说明
 
-1. 定义一个倒计时对象{% highlight ruby %} Ticts {% endhighlight %}
+1. 定义一个倒计时对象 Ticts
 
 {% highlight ruby %}
 var Ticts=function Ticts() {
