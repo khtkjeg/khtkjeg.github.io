@@ -10,66 +10,66 @@ keywords: javascript
 
 ## 说明
 
-	1. 定义一个倒计时对象 Ticts
+1、定义一个倒计时对象 Ticts
 
-	{% highlight ruby %}
-	var Ticts=function Ticts() {
-	    this.ticts = {}; 
-	};
-	{% endhighlight %}
+{% highlight ruby %}
+var Ticts=function Ticts() {
+    this.ticts = {}; 
+};
+{% endhighlight %}
 
-	2. 为"Ticts"对象添加自定义方法 createTicts 和 deleteTicts
+2、为"Ticts"对象添加自定义方法 createTicts 和 deleteTicts
 
-	{% highlight ruby %}
-	Ticts.prototype.createTicts=function(id,endtime){
-	})
-	Ticts.prototype.deleteTicts = function(id) {
-	})
-	{% endhighlight %}
-	3. 通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
+{% highlight ruby %}
+Ticts.prototype.createTicts=function(id,endtime){
+})
+Ticts.prototype.deleteTicts = function(id) {
+})
+{% endhighlight %}
+3、通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
 
-	{% highlight ruby %}
-	Ticts.prototype.createTicts=function(id,endtime){
-	    var ticts=this;
-	    var now = new Date();
-	    var endDate = new Date(endtime);
-	    var time=endDate.getTime()-now.getTime();
-	    var _ticts=this.ticts[id] = {
-	        endtime:endtime,
-	        id:id,
-	        time:time,
-	        interval:setInterval(function(){
-	            var t = null;
-	            var d = null;
-	            var h = null;
-	            var m = null;
-	            var s = null;
-	            t=_ticts.time/1000;
-	            d = Math.floor(t / (24 * 3600));
-	            h = Math.floor((t - 24 * 3600 * d) / 3600);
-	            m = Math.floor((t - 24 * 3600 * d - h * 3600) / 60);
-	            s = Math.floor((t - 24 * 3600 * d - h * 3600 - m * 60));
-	            document.getElementById(id).innerHTML = d + '天' + h + '小时' + m + '分钟' + s + '秒';
-	            _ticts.time -= 1000;
-	            if (_ticts.time < 0)
-					ticts.deleteTicts(id);                               
-	        },1000)
-	    }       
-	}
-	{% endhighlight %}
-	4. 删除倒计时对象中的定时器对象
+{% highlight ruby %}
+Ticts.prototype.createTicts=function(id,endtime){
+    var ticts=this;
+    var now = new Date();
+    var endDate = new Date(endtime);
+    var time=endDate.getTime()-now.getTime();
+    var _ticts=this.ticts[id] = {
+        endtime:endtime,
+        id:id,
+        time:time,
+        interval:setInterval(function(){
+            var t = null;
+            var d = null;
+            var h = null;
+            var m = null;
+            var s = null;
+            t=_ticts.time/1000;
+            d = Math.floor(t / (24 * 3600));
+            h = Math.floor((t - 24 * 3600 * d) / 3600);
+            m = Math.floor((t - 24 * 3600 * d - h * 3600) / 60);
+            s = Math.floor((t - 24 * 3600 * d - h * 3600 - m * 60));
+            document.getElementById(id).innerHTML = d + '天' + h + '小时' + m + '分钟' + s + '秒';
+            _ticts.time -= 1000;
+            if (_ticts.time < 0)
+				ticts.deleteTicts(id);                               
+        },1000)
+    }       
+}
+{% endhighlight %}
+4、删除倒计时对象中的定时器对象
 
-	{% highlight ruby %}
-	Ticts.prototype.deleteTicts = function(id) {
-	    clearInterval(this.ticts[id].interval);
-	    delete this.ticts[id];
-	};
-	{% endhighlight %}
-	5. 最后创建一个倒计时对象，并添加到 window 方法中
+{% highlight ruby %}
+Ticts.prototype.deleteTicts = function(id) {
+    clearInterval(this.ticts[id].interval);
+    delete this.ticts[id];
+};
+{% endhighlight %}
+5、最后创建一个倒计时对象，并添加到 window 方法中
 
-	{% highlight ruby %}
-	window.Ticts=new Ticts();
-	{% endhighlight %}
+{% highlight ruby %}
+window.Ticts=new Ticts();
+{% endhighlight %}
 
 ## 引用
 	
