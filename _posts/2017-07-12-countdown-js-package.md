@@ -10,7 +10,7 @@ keywords: javascript
 
 ## 说明
 
-1、定义一个倒计时对象 Ticts
+1、定义一个倒计时对象 `Ticts`
 
 {% highlight ruby %}
 var Ticts=function Ticts() {
@@ -18,7 +18,7 @@ var Ticts=function Ticts() {
 };
 {% endhighlight %}
 
-2、为"Ticts"对象添加自定义方法 createTicts 和 deleteTicts
+2、为"Ticts"对象添加自定义方法 `createTicts` 和 `deleteTicts`
 
 {% highlight ruby %}
 Ticts.prototype.createTicts=function(id,endtime){
@@ -28,7 +28,7 @@ Ticts.prototype.deleteTicts = function(id) {
 {% endhighlight %}
 3、通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
 
-{% highlight ruby %}
+```
 Ticts.prototype.createTicts=function(id,endtime){
     var ticts=this;
     var now = new Date();
@@ -56,7 +56,7 @@ Ticts.prototype.createTicts=function(id,endtime){
         },1000)
     }       
 }
-{% endhighlight %}
+```
 4、删除倒计时对象中的定时器对象
 
 {% highlight ruby %}
@@ -86,4 +86,4 @@ Ticts.createTicts("daojishi2","2017-07-12 21:30:12");
 
 ## 总结
 	
-通过简单的实例熟悉了 javascript 中自定义属性的创建，"this"指针指向关系等知识点。
+通过简单的实例熟悉了 `javascript` 中自定义属性的创建，`this`指针指向关系等知识点。
