@@ -18,7 +18,7 @@ var Ticts=function Ticts() {
 };
 {% endhighlight %}
 
-2. 为"Ticts"对象添加自定义方法{% highlight ruby %} createTicts {% endhighlight %}和{% highlight ruby %} deleteTicts {% endhighlight %}
+2. 为"Ticts"对象添加自定义方法 createTicts 和 deleteTicts
 
 {% highlight ruby %}
 Ticts.prototype.createTicts=function(id,endtime){
@@ -52,7 +52,7 @@ Ticts.prototype.createTicts=function(id,endtime){
             document.getElementById(id).innerHTML = d + '天' + h + '小时' + m + '分钟' + s + '秒';
             _ticts.time -= 1000;
             if (_ticts.time < 0)
-　　　　　　　　　　　ticts.deleteTicts(id);                               
+				ticts.deleteTicts(id);                               
         },1000)
     }       
 }
