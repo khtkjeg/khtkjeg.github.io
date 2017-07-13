@@ -16,7 +16,7 @@ var Ticts=function Ticts() {
     this.ticts = {}; 
 };
 {% endhighlight %}
-2、为"Ticts"对象添加自定义方法 `createTicts` 和 `deleteTicts`
+2、为`Ticts`对象添加自定义方法 `createTicts` 和 `deleteTicts`
 {% highlight ruby %}
 Ticts.prototype.createTicts=function(id,endtime){
 })
@@ -24,7 +24,7 @@ Ticts.prototype.deleteTicts = function(id) {
 })
 {% endhighlight %}
 3、通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
-{% highlight ruby %}
+```javascript
 Ticts.prototype.createTicts=function(id,endtime){
     var ticts=this;
     var now = new Date();
@@ -52,7 +52,7 @@ Ticts.prototype.createTicts=function(id,endtime){
         },1000)
     }       
 }
-{% endhighlight %}
+```
 4、删除倒计时对象中的定时器对象
 {% highlight ruby %}
 Ticts.prototype.deleteTicts = function(id) {
