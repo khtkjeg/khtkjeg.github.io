@@ -86,4 +86,4 @@ Ticts.createTicts("daojishi2","2017-07-12 21:30:12");
 
 ## 总结
 	
-	通过简单的实例熟悉了 javascript 中自定义属性的创建，"this"指针指向关系等知识点。
+通过简单的实例熟悉了 javascript 中自定义属性的创建，"this"指针指向关系等知识点。
