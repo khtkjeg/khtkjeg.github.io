@@ -28,7 +28,7 @@ Ticts.prototype.deleteTicts = function(id) {
 {% endhighlight %}
 3、通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
 
-```viml
+{% highlight ruby %}
 Ticts.prototype.createTicts=function(id,endtime){
     var ticts=this;
     var now = new Date();
@@ -56,7 +56,8 @@ Ticts.prototype.createTicts=function(id,endtime){
         },1000)
     }       
 }
-```
+{% endhighlight %}
+
 4、删除倒计时对象中的定时器对象
 
 {% highlight ruby %}
@@ -74,7 +75,7 @@ window.Ticts=new Ticts();
 ## 引用
 	
 {% highlight ruby %}
-	<script src="tick.js"></script>
+<script src="tick.js"></script>
 {% endhighlight %}
 
 ## 调用
