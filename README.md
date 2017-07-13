@@ -1,6 +1,6 @@
 # 路明
 
-我的个人博客：<https://khtkjeg.github.io>，欢迎 Star 和 Fork。
+我的个人博客：<http://luming.men>，欢迎 Star 和 Fork。
 
 ## 概览
 
