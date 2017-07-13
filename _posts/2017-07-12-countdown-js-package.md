@@ -6,23 +6,23 @@ description: 封装一个倒计时对象和方法，基于定时器和当前时�
 keywords: javascript
 ---
 
-通过定时器与当前时间做差得到时间戳，再除以 1000 转成秒,再通过秒转成天、小时、分钟、秒格式；为了实现给页面多个id绑定倒计时，可以通过创建一个倒计时的对象，通过 prototype 属性添加自定义的属性的方式实现两个方法，创建倒计时和删除倒计时。
+通过定时器与当前时间做差得到时间戳，再除以 1000 转成秒,再通过秒转成天、小时、分钟、秒格式；为了实现给页面多个id绑定倒计时，可以通过创建一个倒计时的对象，通过 `prototype` 属性添加自定义的属性的方式实现两个方法，创建倒计时和删除倒计时。
 
 ## 说明
 
 1、定义一个倒计时对象 `Ticts`
-{% highlight ruby %}
+```javascript
 var Ticts=function Ticts() {
     this.ticts = {}; 
 };
-{% endhighlight %}
+```
 2、为`Ticts`对象添加自定义方法 `createTicts` 和 `deleteTicts`
-{% highlight ruby %}
+```javascript
 Ticts.prototype.createTicts=function(id,endtime){
 })
 Ticts.prototype.deleteTicts = function(id) {
 })
-{% endhighlight %}
+```
 3、通过id创建对应的定时器对象,倒计时结束后删掉定时器对象
 ```javascript
 Ticts.prototype.createTicts=function(id,endtime){
@@ -54,25 +54,25 @@ Ticts.prototype.createTicts=function(id,endtime){
 }
 ```
 4、删除倒计时对象中的定时器对象
-{% highlight ruby %}
+```javascript
 Ticts.prototype.deleteTicts = function(id) {
     clearInterval(this.ticts[id].interval);
     delete this.ticts[id];
 };
-{% endhighlight %}
+```
 5、最后创建一个倒计时对象，并添加到 window 方法中
-{% highlight ruby %}
+```javascript
 window.Ticts=new Ticts();
-{% endhighlight %}
+```
 ## 引用
-{% highlight ruby %}
+```javascript
 <script src="tick.js"></script>
-{% endhighlight %}
+```
 ## 调用
-{% highlight ruby %}
+```javascript
 Ticts.createTicts("daojishi1","2017-07-12 21:20:20");
 Ticts.createTicts("daojishi2","2017-07-12 21:30:12");
-{% endhighlight %}
+```
 ## 总结
 通过简单的实例熟悉了 `javascript` 中自定义属性的创建，`this`指针指向关系等知识点。
 ## 源码地址
