@@ -12,11 +12,11 @@ keywords: javascript
 
 1. 定义一个倒计时对象"Ticts"
 
-	{% highlight ruby %}
+{% highlight ruby %}
 	var Ticts=function Ticts() {
 	    this.ticts = {}; 
 	};
-	{% endhighlight %}
+{% endhighlight %}
 
 2. 为"Ticts"对象添加自定义方法"createTicts"和"deleteTicts"
 
