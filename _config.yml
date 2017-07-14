@@ -97,10 +97,10 @@ netease_gentie:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: khtkjeg
-    repo: blog-comments
+    repo: myBlog-comments
     oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+        client_id: 33e49b2bcfa57eb68eef
+        client_secret: d25267c02fd5ddc3b05bd57550fef90b2b0119f2
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : true
 
