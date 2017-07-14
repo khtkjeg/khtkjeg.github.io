@@ -60,6 +60,7 @@ ActorDB
 ## 5. 附docker中部署
 * 5.1. 本地创建挂载目录`mkdir -p /home/app/actor/init`
 * 5.2. 创建初始化配置文件`init.sql`
+
 ```shell
 --WARNING: Every sql statement must be in its own line.
 
@@ -88,7 +89,9 @@ use schema
 actor wchart
 CREATE TABLE demo (id INTEGER PRIMARY KEY, txt TEXT, num DOUBLE)
 commit
+
 ```
+
 * 5.3. 创建`dockerfile`文件
 
 ```shell
