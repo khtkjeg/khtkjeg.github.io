@@ -87,6 +87,7 @@ RUN mkdir -p /home/app/actor/init
 ADD *.sql /home/app/actor/init
 ```
 * 5.4. 创建启动脚本`start.sh`
+
 ```shell
 docker ps -a | grep actor | awk '{print$1}' | xargs docker rm -f
 rm -rf db/*
@@ -95,10 +96,13 @@ docker build -t xtkf-actordb .
 docker run -d -v /home/data/actordb/init/db:/var/lib/actordb -p 33306:33306 -p 33307:33307 --name actordb xtkf-actordb:latest
 ```
 * 5.5. 进入`/home/data/actordb/init`目录下执行`start.sh`,此时初始化镜像、容器、挂载、成功，手动初始化actordb配置
+
 ```shell
 docker exec -it actordb actordb_console -f /home/app/actor/init/init.sql
 ```
+
 * 5.6. 此时初始化actordb成功后，通过下面命令，同时用到初始化时候用户名密码
+
 ```shell
 docker exec -ti 容器id actordb_console -u xtkf -pw xtkf315
 ```
