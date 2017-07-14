@@ -97,7 +97,7 @@ netease_gentie:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: khtkjeg
-    repo: myBlog-comments
+    repo: khtkjeg.github.io
     oauth:
         client_id: 33e49b2bcfa57eb68eef
         client_secret: d25267c02fd5ddc3b05bd57550fef90b2b0119f2
