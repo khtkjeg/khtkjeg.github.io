@@ -9,36 +9,36 @@ keywords: docker
 
 ## 常见centos7下安装
 
-1. 监测是否安装过docker，如果安装进行卸载
+ 1. 监测是否安装过docker，如果安装进行卸载
 
 $ sudo yum remove docker docker-common docker-selinux docker-engine
 
-2. 安装docker CE
+ 2. 安装docker CE
 
 * 安装依赖包
-$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+`$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2`
 * 配置存储仓库地址
-$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+`$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
 * 是否开启测试版本
-$ sudo yum-config-manager --enable docker-ce-edge
-$ sudo yum-config-manager --enable docker-ce-testing
-$ sudo yum-config-manager --disable docker-ce-edge
+`$ sudo yum-config-manager --enable docker-ce-edge`
+`$ sudo yum-config-manager --enable docker-ce-testing`
+`$ sudo yum-config-manager --disable docker-ce-edge`
 * 更新yum包
-$ sudo yum makecache fast
+`$ sudo yum makecache fast`
 * 安装docker-ce
-$ sudo yum install docker-ce
+`$ sudo yum install docker-ce`
 * 查询docker版本
-$ yum list docker-ce.x86_64  --showduplicates | sort -r 
+`$ yum list docker-ce.x86_64  --showduplicates | sort -r`
 docker-ce.x86_64 17.06.0.el7 docker-ce-stable
 * 指定版本安装
-$ sudo yum install docker-ce-<VERSION>
+`$ sudo yum install docker-ce-<VERSION>`
 * 测试容器hello-world
-$ sudo docker run hello-world
+`$ sudo docker run hello-world`
 * 卸载docker-ce
-$ sudo yum remove docker-ce
-$ sudo rm -rf /var/lib/docker
+`$ sudo yum remove docker-ce`
+`$ sudo rm -rf /var/lib/docker`
 
-3. 通过安装包直接安装
+ 3. 通过安装包直接安装
 * 下载centos7下[docker安装包](https://download.docker.com/linux/centos/7/x86_64/stable/Packages/)
 * `$ sudo yum install /path/to/package.rpm`
 * `$ sudo systemctl start docker`
