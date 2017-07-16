@@ -9,12 +9,9 @@ keywords: docker
 
 ## 常见centos7下安装
 
- 1. 监测是否安装过docker，如果安装进行卸载
-
-$ sudo yum remove docker docker-common docker-selinux docker-engine
-
- 2. 安装docker CE
-
+1. 监测是否安装过docker，如果安装进行卸载
+* `$ sudo yum remove docker docker-common docker-selinux docker-engine`
+2. 安装docker CE
 * 安装依赖包
 `$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2`
 * 配置存储仓库地址
@@ -38,7 +35,7 @@ docker-ce.x86_64 17.06.0.el7 docker-ce-stable
 `$ sudo yum remove docker-ce`
 `$ sudo rm -rf /var/lib/docker`
 
- 3. 通过安装包直接安装
+3. 通过安装包直接安装
 * 下载centos7下[docker安装包](https://download.docker.com/linux/centos/7/x86_64/stable/Packages/)
 * `$ sudo yum install /path/to/package.rpm`
 * `$ sudo systemctl start docker`
