@@ -58,12 +58,12 @@ $ sudo docker run hello-world
 
 ## docker常用命令
 
-* 容器生命周期管理 — `docker [run|start|stop|restart|kill|rm|pause|unpause]`
-* 容器操作运维 — `docker [ps|inspect|top|attach|events|logs|wait|export|port]`
-* 容器rootfs命令 — `docker [commit|cp|diff]`
-* 镜像仓库 — `docker [login|pull|push|search]`
-* 本地镜像管理 — `docker [images|rmi|tag|build|history|save|import]`
-* 其他命令 — `docker [info|version]`
+* 容器生命周期管理 —  `docker [run|start|stop|restart|kill|rm|pause|unpause]`
+* 容器操作运维     —  `docker [ps|inspect|top|attach|events|logs|wait|export|port]`
+* 容器rootfs命令   —  `docker [commit|cp|diff]`
+* 镜像仓库         —  `docker [login|pull|push|search]`
+* 本地镜像管理     —  `docker [images|rmi|tag|build|history|save|import]`
+* 其他命令         —  `docker [info|version]`
 
 1. 列出机器上的镜像（images）
 ```
@@ -82,3 +82,27 @@ seanloook/centos6   sean's docker repos         0
 ```
 搜索的范围是官方镜像和所有个人公共镜像。NAME列的 / 后面是仓库的名字。
 3. 从`docker registry server` 中下拉image,Usage: `docker pull [OPTIONS] NAME[:TAG]`
+```
+# docker pull centos
+```
+上面的命令需要注意，在docker v1.2版本以前，会下载官方镜像的centos仓库里的所有镜像，而从v.13开始官方文档里的说明变了：`will pull the centos:latest image, its intermediate layers and any aliases of the same id`，也就是只会下载tag为latest的镜像（以及同一images id的其他tag）。
+也可以明确指定具体的镜像：
+```
+# docker pull centos:centos6
+```
+当然也可以从某个人的公共仓库（包括自己是私人仓库）拉取，形如`docker pull username/repository<:tag_name>`
+```
+# docker pull seanlook/centos:centos6
+```
+如果你没有网络，或者从其他私服获取镜像，形如`docker pull registry.domain.com:5000/repos:<tag_name>`
+```
+# docker pull dl.dockerpool.com:5000/mongo:latest
+```
+4. 推送一个image或repository到registry（push）
+与上面的pull对应，可以推送到Docker Hub的Public、Private以及私服，但不能推送到Top Level Repository。
+```
+# docker push seanlook/mongo
+# docker push registry.tp-link.net:5000/mongo:2014-10-27
+```
+registry.tp-link.NET也可以写成IP，172.29.88.222。
+在repository不存在的情况下，命令行下push上去的会为我们创建为私有库，然而通过浏览器创建的默认为公共库。
