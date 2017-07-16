@@ -56,4 +56,29 @@ $ sudo docker run hello-world
 * `$ sudo docker run hello-world`
 * 卸载`$ sudo yum remove docker-ce`，`$ sudo rm -rf /var/lib/docker`
 
-	
+## docker常用命令
+
+容器生命周期管理 — `docker [run|start|stop|restart|kill|rm|pause|unpause]`
+容器操作运维 — `docker [ps|inspect|top|attach|events|logs|wait|export|port]`
+容器rootfs命令 — `docker [commit|cp|diff]`
+镜像仓库 — `docker [login|pull|push|search]`
+本地镜像管理 — `docker [images|rmi|tag|build|history|save|import]`
+其他命令 — `docker [info|version]`
+
+1. 列出机器上的镜像（images）
+```
+# docker images 
+REPOSITORY               TAG             IMAGE ID        CREATED         VIRTUAL SIZE
+ubuntu                   14.10           2185fd50e2ca    13 days ago     236.9 MB
+…
+```
+其中我们可以根据`REPOSITORY`来判断这个镜像是来自哪个服务器，如果没有 / 则表示官方镜像，类似于`username/repos_name`表示`Github`的个人公共库，类似于`regsistory.example.com:5000/repos_name`则表示的是私服。
+`IMAGE ID`列其实是缩写，要显示完整则带上`--no-trunc`选项
+2. 在docker index中搜索image（search）,Usage: `docker search TERM`
+```
+# docker search seanlo
+NAME                DESCRIPTION           STARS     OFFICIAL   AUTOMATED
+seanloook/centos6   sean's docker repos         0
+```
+搜索的范围是官方镜像和所有个人公共镜像。NAME列的 / 后面是仓库的名字。
+3. 从`docker registry server` 中下拉image,Usage: `docker pull [OPTIONS] NAME[:TAG]`
