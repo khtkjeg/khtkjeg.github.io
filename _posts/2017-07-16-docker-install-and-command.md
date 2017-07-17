@@ -147,12 +147,10 @@ registry.tp-link.NET也可以写成IP，172.29.88.222。
 如果PATH直接就是一个单独的Dockerfile文件则可以不需要上下文；如果URL是一个Git仓库地址，那么创建image的过程中会自动git clone一份到本机的临时目录，它就成为了本次build的上下文。无论指定的PATH是什么，Dockerfile是至关重要的，请参考Dockerfile Reference。
 请看下面的例子：
 ```shell
-# cat Dockerfile 
 FROM seanlook/nginx:bash_vim
 EXPOSE 80
 ENTRYPOINT /usr/sbin/nginx -c /etc/nginx/nginx.conf && /bin/bash
 
-# docker build -t seanlook/nginx:bash_vim_Df .
 Sending build context to Docker daemon 73.45 MB
 Sending build context to Docker daemon 
 Step 0 : FROM seanlook/nginx:bash_vim
