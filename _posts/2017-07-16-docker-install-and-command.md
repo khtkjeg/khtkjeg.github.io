@@ -142,10 +142,10 @@ registry.tp-link.NET也可以写成IP，172.29.88.222。
 * docker commit <container> [repo:tag]
 * 注意：后面的repo:tag可选，只能提交正在运行的container，即通过docker ps可以看见的容器
 8. dockerfile创建新的镜像
-* docker build [OPTIONS] PATH | URL | -
+docker build [OPTIONS] PATH | URL | -
 上面的PATH或URL中的文件被称作上下文，build image的过程会先把这些文件传送到docker的服务端来进行的。
 如果PATH直接就是一个单独的Dockerfile文件则可以不需要上下文；如果URL是一个Git仓库地址，那么创建image的过程中会自动git clone一份到本机的临时目录，它就成为了本次build的上下文。无论指定的PATH是什么，Dockerfile是至关重要的，请参考Dockerfile Reference。
-请看下面的例子：
+请看下面的例子.
 ```shell
 FROM seanlook/nginx:bash_vim
 EXPOSE 80
