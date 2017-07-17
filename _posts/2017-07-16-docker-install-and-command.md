@@ -10,43 +10,43 @@ keywords: docker
 ## 常见centos7下安装
 
 1. 监测是否安装过docker，如果安装进行卸载
-```
+```shell
 $ sudo yum remove docker docker-common docker-selinux docker-engine
 ```
 2. 安装docker CE
 安装依赖包
-```
+```shell
 $ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 配置存储仓库地址
-```
+```shell
 $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 是否开启测试版本
-```
+```shell
 $ sudo yum-config-manager --enable docker-ce-edge
 $ sudo yum-config-manager --enable docker-ce-testing
 $ sudo yum-config-manager --disable docker-ce-edge
 ```
 更新yum包
-```
+```shell
 $ sudo yum makecache fast
 ```
 安装docker-ce
-```
+```shell
 $ sudo yum install docker-ce
 ```
 查询docker版本
-```
+```shell
 $ yum list docker-ce.x86_64  --showduplicates | sort -r
 docker-ce.x86_64 17.06.0.el7 docker-ce-stable
 ```
 指定版本安装
-```
+```shell
 $ sudo yum install docker-ce-<VERSION>
 ```
 测试容器hello-world
-```
+```shell
 $ sudo docker run hello-world
 ```
 3. 通过安装包直接安装
@@ -66,7 +66,7 @@ $ sudo docker run hello-world
 * 其他命令         —  `docker [info|version]`
 
 1. 列出机器上的镜像（images）
-```
+```shell
 # docker images 
 REPOSITORY               TAG             IMAGE ID        CREATED         VIRTUAL SIZE
 ubuntu                   14.10           2185fd50e2ca    13 days ago     236.9 MB
@@ -75,32 +75,32 @@ ubuntu                   14.10           2185fd50e2ca    13 days ago     236.9 M
 其中我们可以根据`REPOSITORY`来判断这个镜像是来自哪个服务器，如果没有 / 则表示官方镜像，类似于`username/repos_name`表示`Github`的个人公共库，类似于`regsistory.example.com:5000/repos_name`则表示的是私服。
 `IMAGE ID`列其实是缩写，要显示完整则带上`--no-trunc`选项
 2. 在docker index中搜索image（search）,Usage: `docker search TERM`
-```
+```shell
 # docker search seanlo
 NAME                DESCRIPTION           STARS     OFFICIAL   AUTOMATED
 seanloook/centos6   sean's docker repos         0
 ```
 搜索的范围是官方镜像和所有个人公共镜像。NAME列的 / 后面是仓库的名字。
 3. 从`docker registry server` 中下拉image,Usage: `docker pull [OPTIONS] NAME[:TAG]`
-```
+```shell
 # docker pull centos
 ```
 上面的命令需要注意，在docker v1.2版本以前，会下载官方镜像的centos仓库里的所有镜像，而从v.13开始官方文档里的说明变了：`will pull the centos:latest image, its intermediate layers and any aliases of the same id`，也就是只会下载tag为latest的镜像（以及同一images id的其他tag）。
 也可以明确指定具体的镜像：
-```
+```shell
 # docker pull centos:centos6
 ```
 当然也可以从某个人的公共仓库（包括自己是私人仓库）拉取，形如`docker pull username/repository<:tag_name>`
-```
+```shell
 # docker pull seanlook/centos:centos6
 ```
 如果你没有网络，或者从其他私服获取镜像，形如`docker pull registry.domain.com:5000/repos:<tag_name>`
-```
+```shell
 # docker pull dl.dockerpool.com:5000/mongo:latest
 ```
 4. 推送一个image或repository到registry（push）
 与上面的pull对应，可以推送到Docker Hub的Public、Private以及私服，但不能推送到Top Level Repository。
-```
+```shell
 # docker push seanlook/mongo
 # docker push registry.tp-link.net:5000/mongo:2014-10-27
 ```
