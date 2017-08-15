@@ -1,9 +1,9 @@
 ---
 layout: post
-title: linux vsftpd安装配置
-categories: linux
+title: Linux vsftpd安装配置
+categories: Linux
 description: 每天记录一点点，快乐工作一辈子
-keywords: linux vsftpd ftp
+keywords: Linux vsftpd ftp
 ---
 
 >项目中部署vsftpd遇到的坑，记录下来，
