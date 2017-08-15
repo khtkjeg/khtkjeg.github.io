@@ -15,39 +15,33 @@ keywords: linux vsftpd ftp
 
 ## yum安装vsftp
 
-```
-yum -y install vsftpd
-```
+>yum -y install vsftpd
 
 ## rpm安装vsftp-[安装包地址](https://pkgs.org/download/vsftpd)
 
-```
-rpm -ivh vsftpd-3.0.2-21.el7.x86_64.rpm
-```
+>rpm -ivh vsftpd-3.0.2-21.el7.x86_64.rpm
+
 
 ## 测试安装
 
-```
-service vsftpd start
-启动成功说明安装成功！
-```
+>service vsftpd start /*启动成功说明安装成功！*/
 
 ## 配置vsftpd
 
-```
-查找配置目录：whereis vsftpd
-默认配置文件: /etc/vsftpd.conf
-```
+
+>whereis vsftpd  /*查找配置目录*/
+>/etc/vsftpd.conf  /*默认配置文件*/
+
 
 ## 配置文件说明（/etc/vsftpd/）
 
-```
-1. user_list
+
+>1. user_list
 禁止或允许使用vsftpd的用户列表文件。这个文件中指定的用户缺省情况（即在/etc/vsftpd/vsftpd，conf中设置userlist_deny=YES）下也不能访问FTP服务器，在设置了userlist_deny=NO时,仅允许user_list中指定的用户访问FTP服务器。
-2. ftpusers
+>2. ftpusers
 禁止使用vsftpd的用户列表文件。记录不允许访问FTP服务器的用户名单，管理员可以把一些对系统安全有威胁的用户账号记录在此文件中，以免用户从FTP登录后获得大于上传下载操作的权利，而对系统造成损坏。
-3. vsftpd.conf     主配置文件
-```
+>3. vsftpd.conf     主配置文件
+
 
 ## vsftpd.conf配置
 
@@ -76,17 +70,17 @@ allow_writeable_chroot=YES
 
 ## 防火墙设置
 
-```
+```shell
 iptables -nL  /*查看全部端口限制策略*/
 iptables -I INPUT 5 -p tcp --dport 21 -j ACCEPT
 vi /etc/sysconfig/iptables-config
-添加：IPTABLES_MODULES="ip_nat_ftp"
+IPTABLES_MODULES="ip_nat_ftp" /*添加*/
 iptables save
 ```
 
 ## 添加用户ftpuser
 
-```
+```shell
 useradd -d /home/ftp -s /sbin/nologin ftpuser
 说明:
 -d 用访问的根目录
