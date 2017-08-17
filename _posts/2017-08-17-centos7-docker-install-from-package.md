@@ -23,6 +23,7 @@ keywords: centos7 docker install package
 ```shell
 rpm -ivh *.rpm  --nodeps --force
 ```
+![docker-install-from-package.png]()
 
 ## 启动服务
 
