@@ -77,7 +77,7 @@ kill -9 PIP
 /usr/bin/rsync --daemon --config=/etc/rsyncd.conf
 ```
 
-# 客户端
+# 客户端（192.168.0.1）
 >相比于服务端客户端不需要启动rsync服务,注意这里不需要加`root:`
 
 ## 创建密码文件
