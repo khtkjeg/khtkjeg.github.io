@@ -120,7 +120,6 @@ Examples:
 >常用快捷方式命令
 ```shell
 supervisor  app.js
-
 ```
 >在express框架中执行入口在`./bin/www`在执行时应该在`./`目录执行命令
 ```shell
@@ -152,8 +151,8 @@ npm install -g pm2
 │ helloworld │ 0  │ fork │ 2251 │ online │ 0       │ 0s     │ 14.715 MB   │ disabled │
 └────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
  Use `pm2 show <id|name>` to get more details about an app
-
 ```
+
 >启动一个express框架服务
 ```shell
 pm2 start ./bin/www --name 'draw'
@@ -161,7 +160,7 @@ pm2 start ./bin/www --name 'draw'
 ## 常用命令说明
 
 1. `pm2 list`  查看全部运行任务列表
-![list](./images/post/node/pm2-list.png)
+![list](./images/posts/node/pm2-list.png)
 ```shell
 [root@localhost draw]# pm2 list
 ┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
@@ -180,7 +179,7 @@ pm2 start ./bin/www --name 'draw'
 5. `pm2 reload <app_name|id|all>` 重载
 
 6. `pm2 monit`
-![monit](./images/post/node/pm2-monit.png)
+![monit](./images/posts/node/pm2-monit.png)
 
 7. `pm2 start app.js --max_memory_restart 1024M`  当内存超过1024M时自动重启
 
