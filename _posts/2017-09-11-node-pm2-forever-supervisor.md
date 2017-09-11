@@ -136,12 +136,15 @@ supervisor bin/www
 > pm2是目前处理大并发后台程序最好的工具，能够详细的监控程序的运行状态，遇到异常能够自动重启，同时还提供高级功能设置如支持配置文件启动，配置文件中可以添加内存限制、cpu核数、输入输出日志等高级设置，同时pm2提供对外的API接口，可以根据API开发自己的监控页面。
 
 ## npm全局安装
+
 ```shell
 npm install -g pm2
 ```
+
 ## 应用
 
 > 启动一个简单的服务命令
+
 ```shell
 [root@localhost www]# pm2 start helloworld.js --name 'helloworld'
 [PM2] Spawning PM2 daemon
@@ -157,9 +160,11 @@ npm install -g pm2
 ```
 
 > 启动一个express框架服务
+
 ```shell
 pm2 start ./bin/www --name 'draw'
 ```
+
 ## 常用命令说明
 
 1. `pm2 list`  查看全部运行任务列表
@@ -189,6 +194,7 @@ pm2 start ./bin/www --name 'draw'
 ## 高级用法
 
 > `pm2 draw` 生成 draw.json配置文件
+
 ```json
 {
     /**
@@ -218,11 +224,15 @@ pm2 start ./bin/www --name 'draw'
 # forever
 
 ## 说明
+
 > forever相比于pm2，同样能够实现后台异常重启服务，能够后台服务运行，能够监控文件变化自动重启服务，能够输出日志，缺点是功能单一不能实现实时监控，不能应用到大并发应用部署，不能知道资源部署，如果我们只是本地跑个简单的应用使用还是很方便的。
+
 ## npm全局安装
+
 ```shell
 npm install -g forever 
 ```
+
 ## 常用命令
 
 1. `forever start app.js `  启动
