@@ -6,7 +6,7 @@ description: 每天记录一点点，快乐工作一辈子
 keywords: pm2 forever supervisor
 ---
 
->开发nodejs的人都知道它是单进程的模式，每次执行的时候都要执行`node XXX.js`，`CTRL+C`后服务就停止了，如果他们能都在后台运行，并且能够实时监控到这些状态信息，就解决了部署的很多麻烦，这里介绍三个常用的后台开发部署工具：`supervisor`、`pm2`、`forever`;不同的工具应用场景也不同，下面详细介绍一下：
+> 开发nodejs的人都知道它是单进程的模式，每次执行的时候都要执行`node XXX.js`，`CTRL+C`后服务就停止了，如果他们能都在后台运行，并且能够实时监控到这些状态信息，就解决了部署的很多麻烦，这里介绍三个常用的后台开发部署工具：`supervisor`、`pm2`、`forever`;不同的工具应用场景也不同，下面详细介绍一下：
 
 # supervisor
 
@@ -168,7 +168,7 @@ pm2 start ./bin/www --name 'draw'
 ## 常用命令说明
 
 1. `pm2 list`  查看全部运行任务列表
-![](./images/posts/node/pm2-list.png)
+![](/images/posts/node/pm2-list.png)
 ```shell
 [root@localhost draw]# pm2 list
 ┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
@@ -186,8 +186,8 @@ pm2 start ./bin/www --name 'draw'
 
 5. `pm2 reload <app_name|id|all>` 重载
 
-6. `pm2 monit`
-![](./images/posts/node/pm2-monit.png)
+6. `pm2 monit`  监控
+![](/images/posts/node/pm2-monit.png)
 
 7. `pm2 start app.js --max_memory_restart 1024M`  当内存超过1024M时自动重启
 
