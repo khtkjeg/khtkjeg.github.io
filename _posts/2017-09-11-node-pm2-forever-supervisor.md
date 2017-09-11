@@ -117,11 +117,14 @@ Examples:
 
 ## 应用
 
->常用快捷方式命令
+> 常用快捷方式命令
+
 ```shell
 supervisor  app.js
 ```
->在express框架中执行入口在`./bin/www`在执行时应该在`./`目录执行命令
+
+> 在express框架中执行入口在`./bin/www`在执行时应该在`./`目录执行命令
+
 ```shell
 supervisor bin/www
 ```
@@ -130,7 +133,7 @@ supervisor bin/www
 
 ## 说明
 
->pm2是目前处理大并发后台程序最好的工具，能够详细的监控程序的运行状态，遇到异常能够自动重启，同时还提供高级功能设置如支持配置文件启动，配置文件中可以添加内存限制、cpu核数、输入输出日志等高级设置，同时pm2提供对外的API接口，可以根据API开发自己的监控页面。
+> pm2是目前处理大并发后台程序最好的工具，能够详细的监控程序的运行状态，遇到异常能够自动重启，同时还提供高级功能设置如支持配置文件启动，配置文件中可以添加内存限制、cpu核数、输入输出日志等高级设置，同时pm2提供对外的API接口，可以根据API开发自己的监控页面。
 
 ## npm全局安装
 ```shell
@@ -138,7 +141,7 @@ npm install -g pm2
 ```
 ## 应用
 
->启动一个简单的服务命令
+> 启动一个简单的服务命令
 ```shell
 [root@localhost www]# pm2 start helloworld.js --name 'helloworld'
 [PM2] Spawning PM2 daemon
@@ -153,14 +156,14 @@ npm install -g pm2
  Use `pm2 show <id|name>` to get more details about an app
 ```
 
->启动一个express框架服务
+> 启动一个express框架服务
 ```shell
 pm2 start ./bin/www --name 'draw'
 ```
 ## 常用命令说明
 
 1. `pm2 list`  查看全部运行任务列表
-![list](./images/posts/node/pm2-list.png)
+![](./images/posts/node/pm2-list.png)
 ```shell
 [root@localhost draw]# pm2 list
 ┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
@@ -179,13 +182,13 @@ pm2 start ./bin/www --name 'draw'
 5. `pm2 reload <app_name|id|all>` 重载
 
 6. `pm2 monit`
-![monit](./images/posts/node/pm2-monit.png)
+![](./images/posts/node/pm2-monit.png)
 
 7. `pm2 start app.js --max_memory_restart 1024M`  当内存超过1024M时自动重启
 
 ## 高级用法
 
->`pm2 draw` 生成 draw.json配置文件
+> `pm2 draw` 生成 draw.json配置文件
 ```json
 {
     /**
@@ -210,12 +213,12 @@ pm2 start ./bin/www --name 'draw'
     ]
  }
 ```
->`pm2 start draw.json`
+> `pm2 start draw.json`
 
 # forever
 
 ## 说明
->forever相比于pm2，同样能够实现后台异常重启服务，能够后台服务运行，能够监控文件变化自动重启服务，能够输出日志，缺点是功能单一不能实现实时监控，不能应用到大并发应用部署，不能知道资源部署，如果我们只是本地跑个简单的应用使用还是很方便的。
+> forever相比于pm2，同样能够实现后台异常重启服务，能够后台服务运行，能够监控文件变化自动重启服务，能够输出日志，缺点是功能单一不能实现实时监控，不能应用到大并发应用部署，不能知道资源部署，如果我们只是本地跑个简单的应用使用还是很方便的。
 ## npm全局安装
 ```shell
 npm install -g forever 
