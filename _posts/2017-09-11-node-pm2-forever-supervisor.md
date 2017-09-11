@@ -8,14 +8,4 @@ keywords: pm2 forever supervisor
 
 > 开发nodejs的人都知道它是单进程的模式，每次执行的时候都要执行`node XXX.js`，`CTRL+C`后服务就停止了，如果他们能都在后台运行，并且能够实时监控到这些状态信息，就解决了部署的很多麻烦，这里介绍三个常用的后台开发部署工具：`supervisor`、`pm2`、`forever`;不同的工具应用场景也不同，下面详细介绍一下：
 
-# supervisor
-
-> `supervisor`适合应用在开发调试阶段，它的优点就是实时可以监控文件的改变，然后重新启动服务，避免了开发人员修改文件后频繁的重启服务，其特点类似PHP脚本语言的部署。
-
-## npm全局安装
-
-```shell
-npm install -g supervisor
-```
-## 详细命令说明
 
