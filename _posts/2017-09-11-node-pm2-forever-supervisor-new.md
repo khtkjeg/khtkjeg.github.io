@@ -19,93 +19,26 @@ npm install -g supervisor
 ```
 ## 详细命令说明
 
+`supervisor -w` 监控文件夹变化，重启服务
+
+`supervisor -i` 忽略监控指定的文件夹，多个文件夹可以用`;`隔开
+
+`supervisor -p` 以轮询的方式监控文件夹修改，默认为node目录
+
+`supervisor -e` 监控指定扩展名后缀的文件修改，默认为node js
+
+`supervisor -x` 运行指定的可执行的文件，默认node
+
+`supervisor -n` 文件修改不会重启监控程序，出现异常仍然重启服务
+
+`supervisor -t` 禁用所有交互能力
+
+`supervisor -k` 强制性的结束子进程
+
+`supervisor -s` 每次运行后增加时间戳，容易记录最后一次运行时间
+``
+
 ```shell
-Node Supervisor is used to restart programs when they crash.
-It can also be used to restart programs when a *.js file changes.
-
-Usage:
-  supervisor [options] <program>
-  supervisor [options] -- <program> [args ...]
-
-Required:
-  <program>
-    The program to run.
-
-Options:
-  -w|--watch <watchItems>
-    A comma-delimited list of folders or js files to watch for changes.
-    When a change to a js file occurs, reload the program
-    Default is .
-
-  -i|--ignore <ignoreItems>
-    A comma-delimited list of folders to ignore for changes.
-    No default
-
-  --ignore-symlinks
-    Enable symbolic links ignoring when looking for files to watch.
-
-  -p|--poll-interval <milliseconds>
-    How often to poll watched files for changes.
-    Defaults to Node default.
-
-  -e|--extensions <extensions>
-    Specific file extensions to watch in addition to defaults.
-    Used when --watch option includes folders
-    Default is node,js
-
-  -x|--exec <executable>
-    The executable that runs the specified program.
-    Default is node
-
-  --debug[=port]
-    Start node with --debug flag. 
-
-  --debug-brk[=port]
-    Start node with --debug-brk[=port] flag.
-
-  --harmony
-    Start node with --harmony flag.
-  --inspect
-    Start node with --inspect flag.
-
-  --harmony_default_parameters
-    Start node with --harmony_default_parameters flag.
-
-  -n|--no-restart-on error|exit
-    Don not automatically restart the supervised program if it ends.
-    Supervisor will wait for a change in the source files.
-    If error, an exit code of 0 will still restart.
-    If exit, no restart regardless of exit code.
-    If success, no restart only if exit code is 0.
-
-  -t|--non-interactive
-    Disable interactive capacity.
-    With this option, supervisor won not listen to stdin.
-
-  -k|--instant-kill
-    use SIGKILL (-9) to terminate child instead of the more gentle SIGTERM.
-
-  --force-watch
-    Use fs.watch instead of fs.watchFile.
-    This may be useful if you see a high cpu load on a windows machine.
-
-  -s|--timestamp
-    Log timestamp after each run.
-    Make it easy to tell when the task last ran.
-
-  -h|--help|-?
-    Display these usage instructions.
-
-  -q|--quiet
-    Suppress DEBUG messages
-
-  -V|--verbose
-    Show extra DEBUG messages
-
-Options available after start:
-rs - restart process.
-     Useful for restarting supervisor eaven if no file has changed.
-
 Examples:
   supervisor myapp.js
   supervisor myapp.coffee
@@ -165,7 +98,7 @@ pm2 start ./bin/www --name draw
 ## 常用命令说明
 
 `pm2 list`  查看全部运行任务列表
-![](/images/posts/node/pm2-list.png)
+
 ```shell
 [root@localhost draw]# pm2 list
 ┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
@@ -231,13 +164,18 @@ npm install -g forever
 ## 常用命令
 
 `forever start app.js `  启动
-`forever stop app.js`    停止
-`forever start -l forever.log app.js `  指定forever信息输出文件，当然，默认它会放到~/.forever/forever.log
-`forever start -o out.log -e err.log app.js ` app.js中的日志信息和错误日志输出, -o 就是console.log输出的信息，-e 就是console.error输出
-`forever start -l forever.log -a app.js `  -a 追加日志
-`forever start -w app.js `  监听文件夹是否改动
-`forever list  `  显示所有任务
 
+`forever stop app.js`    停止
+
+`forever start -l forever.log app.js `指定forever信息输出文件，当然，默认它会放到~/.forever/forever.log 
+
+`forever start -o out.log -e err.log app.js ` app.js中的日志信息和错误日志输出, -o 就是console.log输出的信息，-e 就是console.error输出
+
+`forever start -l forever.log -a app.js `  -a 追加日志
+
+`forever start -w app.js `  监听文件夹是否改动
+
+`forever list  `  显示所有任务
 
 # 总结
 
