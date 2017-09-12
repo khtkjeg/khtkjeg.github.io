@@ -61,6 +61,8 @@ subscribe_rss: /feed.xml
 # ---------------- #
 markdown: kramdown
 highlighter: rouge
+kramdown:
+    syntax_highlighter: rouge
 paginate: 8
 lsi: false
 quiet: false
