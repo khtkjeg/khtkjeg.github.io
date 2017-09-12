@@ -149,6 +149,7 @@ pm2 start ./bin/www --name draw
     ]
  }
 ```
+
 > `pm2 start draw.json`
 
 # forever
