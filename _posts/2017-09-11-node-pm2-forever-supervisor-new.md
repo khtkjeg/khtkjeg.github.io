@@ -35,7 +35,7 @@ Options:
   -w|--watch <watchItems>
     A comma-delimited list of folders or js files to watch for changes.
     When a change to a js file occurs, reload the program
-    Default is '.'
+    Default is .
 
   -i|--ignore <ignoreItems>
     A comma-delimited list of folders to ignore for changes.
@@ -51,11 +51,11 @@ Options:
   -e|--extensions <extensions>
     Specific file extensions to watch in addition to defaults.
     Used when --watch option includes folders
-    Default is 'node,js'
+    Default is node,js
 
   -x|--exec <executable>
     The executable that runs the specified program.
-    Default is 'node'
+    Default is node
 
   --debug[=port]
     Start node with --debug flag. 
@@ -72,15 +72,15 @@ Options:
     Start node with --harmony_default_parameters flag.
 
   -n|--no-restart-on error|exit
-    Don't automatically restart the supervised program if it ends.
+    Don not automatically restart the supervised program if it ends.
     Supervisor will wait for a change in the source files.
-    If "error", an exit code of 0 will still restart.
-    If "exit", no restart regardless of exit code.
-    If "success", no restart only if exit code is 0.
+    If error, an exit code of 0 will still restart.
+    If exit, no restart regardless of exit code.
+    If success, no restart only if exit code is 0.
 
   -t|--non-interactive
     Disable interactive capacity.
-    With this option, supervisor won't listen to stdin.
+    With this option, supervisor won not listen to stdin.
 
   -k|--instant-kill
     use SIGKILL (-9) to terminate child instead of the more gentle SIGTERM.
@@ -111,6 +111,7 @@ Examples:
   supervisor myapp.coffee
   supervisor -w scripts -e myext -x myrunner myapp
   supervisor -- server.js -h host -p port
+
 ```
 
 ## 应用
@@ -142,7 +143,7 @@ npm install -g pm2
 > 启动一个简单的服务命令
 
 ```shell
-[root@localhost www]# pm2 start helloworld.js --name 'helloworld'
+[root@localhost www]# pm2 start helloworld.js --name helloworld
 [PM2] Spawning PM2 daemon
 [PM2] PM2 Successfully daemonized
 [PM2] Starting helloworld.js in fork_mode (1 instance)
@@ -152,13 +153,13 @@ npm install -g pm2
 ├────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────────────┼──────────┤
 │ helloworld │ 0  │ fork │ 2251 │ online │ 0       │ 0s     │ 14.715 MB   │ disabled │
 └────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
- Use `pm2 show <id|name>` to get more details about an app
+ Use 'pm2 show <id|name>' to get more details about an app
 ```
 
 > 启动一个express框架服务
 
 ```shell
-pm2 start ./bin/www --name 'draw'
+pm2 start ./bin/www --name draw
 ```
 
 ## 常用命令说明
