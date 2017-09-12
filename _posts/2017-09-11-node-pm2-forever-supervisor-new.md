@@ -164,7 +164,7 @@ pm2 start ./bin/www --name draw
 
 ## 常用命令说明
 
-1. `pm2 list`  查看全部运行任务列表
+`pm2 list`  查看全部运行任务列表
 ![](/images/posts/node/pm2-list.png)
 ```shell
 [root@localhost draw]# pm2 list
@@ -175,18 +175,18 @@ pm2 start ./bin/www --name draw
 └──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴───────────┴──────┴──────────┘
  Use `pm2 show <id|name>` to get more details about an app
 ```
-2. `pm2 stop  <app_name|id|all>`  停止
+`pm2 stop  <app_name|id|all>`  停止
 
-3. `pm2 delete <app_name|id|all>` 删除
+`pm2 delete <app_name|id|all>` 删除
 
-4. `pm2 restart <app_name|id|all>` 重启
+`pm2 restart <app_name|id|all>` 重启
 
-5. `pm2 reload <app_name|id|all>` 重载
+`pm2 reload <app_name|id|all>` 重载
 
-6. `pm2 monit`  监控
+`pm2 monit`  监控
 ![](/images/posts/node/pm2-monit.png)
 
-7. `pm2 start app.js --max_memory_restart 1024M`  当内存超过1024M时自动重启
+`pm2 start app.js --max_memory_restart 1024M`  当内存超过1024M时自动重启
 
 ## 高级用法
 
@@ -230,13 +230,13 @@ npm install -g forever
 
 ## 常用命令
 
-1. `forever start app.js `  启动
-2. `forever stop app.js`    停止
-3. `forever start -l forever.log app.js `  指定forever信息输出文件，当然，默认它会放到~/.forever/forever.log
-4. `forever start -o out.log -e err.log app.js ` app.js中的日志信息和错误日志输出, -o 就是console.log输出的信息，-e 就是console.error输出
-5. `forever start -l forever.log -a app.js `  -a 追加日志
-6. `forever start -w app.js `  监听文件夹是否改动
-7. `forever list  `  显示所有任务
+`forever start app.js `  启动
+`forever stop app.js`    停止
+`forever start -l forever.log app.js `  指定forever信息输出文件，当然，默认它会放到~/.forever/forever.log
+`forever start -o out.log -e err.log app.js ` app.js中的日志信息和错误日志输出, -o 就是console.log输出的信息，-e 就是console.error输出
+`forever start -l forever.log -a app.js `  -a 追加日志
+`forever start -w app.js `  监听文件夹是否改动
+`forever list  `  显示所有任务
 
 
 # 总结
