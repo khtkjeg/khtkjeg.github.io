@@ -69,17 +69,17 @@ jps | grep Elasticsearch | awk {'print$1'} | xargs kill -9
 
 * 修改vm.max_map_count（虚拟内存）
 
-root用户下执行： `vi /etc/sysctl.conf`
+* root用户下执行： `vi /etc/sysctl.conf`
 
 ```shell
 vm.max_map_count=200000
 ```
 
-保存配置修改：`sysctl -p`
+* 保存配置修改：`sysctl -p`
 
 * 文件descriptors修改
 
-root用户下执行：`vi /etc/security/limits.conf`,添加配置
+* root用户下执行：`vi /etc/security/limits.conf`,添加配置
 
 ```shell
 es soft nofile 65536 (es为用户名)
@@ -89,11 +89,12 @@ es hard nofile 65536
 * 测试请求
 
 linux：`curl -X GET http://192.168.1.2:9200`
+
 浏览器：`http://192.168.1.2:9200`
 
 ## 推荐客户端谷歌浏览器插件
 
-* [Sense](http://www.cnplugins.com/down/predown.aspx?fn=1412/www.cnplugins.com_lhjgkmllcaadmopgmanpapmpjgmfcfig_0_9_0_.crx&aid=2935)
+* Sense：[下载](http://www.cnplugins.com/down/predown.aspx?fn=1412/www.cnplugins.com_lhjgkmllcaadmopgmanpapmpjgmfcfig_0_9_0_.crx&aid=2935)
 
 ![sense](/images/posts/elasticsearch/sense.png)
 
