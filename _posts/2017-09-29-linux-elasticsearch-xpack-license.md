@@ -1,6 +1,6 @@
 ---
 layout: post
-title: elasticsearch5.x x-pack产检license破解 
+title: elasticsearch5.x x-pack插件license破解 
 categories: elasticsearch
 description: 每天记录一点点，快乐工作一辈子
 keywords: elasticsearch x-pack
