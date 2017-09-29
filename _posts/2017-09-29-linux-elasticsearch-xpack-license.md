@@ -64,4 +64,4 @@ curl -XPUT -u elastic 'http://localhost:9200/_xpack/license?acknowledge=true' -H
 
 ![](/images/posts/elasticsearch/x-pack.png)
 
-*11.* 转载[http://blog.csdn.net/mvpboss1004/article/details/65445023](http://blog.csdn.net/mvpboss1004/article/details/65445023)
+*11.* 转载[http://blog.csdn.net/mvpboss1004/article/details/65445023](http://blog.csdn.net/mvpboss1004/article/details/65445023),本人亲测可用。
