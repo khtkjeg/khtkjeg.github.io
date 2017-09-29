@@ -61,4 +61,7 @@ curl -XPUT -u elastic 'http://localhost:9200/_xpack/license?acknowledge=true' -H
 ```
 
 *10.* 破解结果如下
+
 ![](/images/posts/elasticsearch/x-pack.png)
+
+*11.* 转载[http://blog.csdn.net/mvpboss1004/article/details/65445023](http://blog.csdn.net/mvpboss1004/article/details/65445023)
