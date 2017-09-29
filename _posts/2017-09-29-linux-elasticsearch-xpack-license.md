@@ -40,7 +40,7 @@ public class LicenseVerifier
 
 5. 然后需要重新编译class文件。注意这里我们无需编译整个工程，将原来的`x-pack-5.2.0.jar`和依赖包加入CLASSPATH，即可完成单个文件的编译。实际上只用到了3个依赖包，如果是用RPM或DEB安装的，直接运行：
 
-```java
+```shell
 javac -cp '/usr/share/elasticsearch/lib/elasticsearch-5.x.0.jar:/usr/share/elasticsearch/lib/lucene-core-6.4.0.jar:/usr/share/elasticsearch/plugins/x-pack/x-pack-5.x.0.jar' LicenseVerifier.java
 ```
 
