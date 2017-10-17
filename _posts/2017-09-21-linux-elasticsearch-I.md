@@ -15,7 +15,7 @@ keywords: elasticsearch
 * 解压    ：`tar -zxvf elasticsearch-5.6.1.tar.gz`
 * 创建用户：`useradd es`,`passwd es` (ES默认是禁止以root用户启动)
 * 切换用户：`su es`
-* 修改文件夹所属目录：`chmod -R es elasticsearch-5.6.1 `
+* 修改文件夹所属目录：`chown -R es:es elasticsearch-5.6.1 `
 * 启动ES：`cd elasticsearch-5.6.1/bin`,`./elasticsearch`
 * 后台方式启动：`./elasticsearch -d`
 * 查看服务进程：`jps`
