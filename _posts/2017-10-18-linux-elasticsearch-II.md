@@ -38,7 +38,7 @@ keywords: elasticsearch claster
 
 ## kibana管理
 
-![claster]('/images/posts/elasticsearch/claster.png')
+![claster](/images/posts/elasticsearch/claster.png)
 
 ## 总结
 
