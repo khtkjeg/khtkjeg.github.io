@@ -42,4 +42,4 @@ keywords: elasticsearch claster
 
 ## 总结
 
-> elasticsearch相比于Hbase存在很多有点，最直接的就是查询速度完爆Hbase，目前测试数据4400万，匹配查询取100条速度在100ms以内，而且是搭建的单机模式速度基本满足要求，还有ES磁盘存储量远远小于Hbase。
+> 动态扩充集群的时候需要重启主节点。
