@@ -1,9 +1,9 @@
 ---
 layout: post
 title: vue2 axios请求头添加auth认证
-categories: elasticsearch
+categories: vue
 description: 每天记录一点点，快乐工作一辈子
-keywords: elasticsearch claster
+keywords: vue axios header auth
 ---
 
 > 请求认证方法一般通过jwt服务端生成token返回给客户端，保存到localStorage或者sessionStorage中，每次请求自动添加到header中
