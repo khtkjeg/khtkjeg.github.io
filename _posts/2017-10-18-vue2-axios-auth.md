@@ -8,7 +8,7 @@ keywords: vue axios header auth
 
 > 请求认证方法一般通过jwt服务端生成token返回给客户端，保存到localStorage或者sessionStorage中，每次请求自动添加到header中
 
-```
+```javascript
 // axios——设置请求
 import Vue from 'vue'
 import axios from 'axios'
