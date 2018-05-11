@@ -47,6 +47,6 @@ realm = /svndir
 
 ### 操作流程
 
-1)  启动命令：`svnserve -d -r /svndir`
-2)  停止命令：`ps –ef | grep svn` 查询当前进程是否存在，如果存在需要 `kill -9 进程ID结束`
-3)  客户端链接：`svn://121.40.135.43/test`
+1. 启动命令：`svnserve -d -r /svndir`
+2. 停止命令：`ps –ef | grep svn` 查询当前进程是否存在，如果存在需要 `kill -9 进程ID结束`
+3. 客户端链接：`svn://121.40.135.43/test`
