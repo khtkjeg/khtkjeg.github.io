@@ -66,7 +66,7 @@ curl -XPUT http://10.14.84.47:9200/_snapshot/my_backup/snapshot_20180606 -d '
  curl -XGET http://10.14.84.47:9200/_snapshot/my_backup/snapshot_20180606?pretty
 ```
 
-###　新集群添加备份仓库
+### 新集群添加备份仓库
 
 修改配置文件`elasticsearch.yml`,添加如下配置(需要在新集群的每个节点上添加)：
 
