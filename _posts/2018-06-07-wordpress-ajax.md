@@ -11,9 +11,9 @@ keywords: wordpress
 
 ### 注册javascript
 
-首先我们是操作后台页面所有使用`admin_enqueue_scripts`这个hook,`publish_post_enqueues`,为回调函数，使用`wp_register_script`将我们的js文件注册进去,钩子名称为`admin_integral`,`wp_localize_script`的作用是传递参数，将`daArg`对象传给js中，js调用访问为`daArg.ajaxProvince`
+首先我们是操作后台页面，所以使用`admin_enqueue_scripts`这个hook,`publish_post_enqueues`,为回调函数，使用`wp_register_script`将我们的js文件注册进去,钩子名称为`admin_integral`,`wp_localize_script`的作用是传递参数，将`daArg`对象传给js中，js调用访问为`daArg.ajaxProvince`
 
-```PHP
+```php
 add_action('admin_enqueue_scripts', '`publish_post_enqueues`');
 function publish_post_enqueues()
 {
@@ -30,7 +30,7 @@ function publish_post_enqueues()
 
 `wp_ajax_`是默认必须要加的，后面是自定义的名字。
 
-```PHP
+```php
 add_action('wp_ajax_admin_integral_setting', 'publish_post_integral');
 
 function publish_post_integral()
