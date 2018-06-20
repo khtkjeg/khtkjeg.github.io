@@ -1,7 +1,7 @@
 ---
 layout: post
 title: wordpress ajax接口
-categories: elasticsearch
+categories: wordpress
 description: 每天记录一点点，快乐工作一辈子
 keywords: wordpress
 ---
