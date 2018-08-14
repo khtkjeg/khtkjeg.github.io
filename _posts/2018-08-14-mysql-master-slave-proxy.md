@@ -34,9 +34,8 @@ keywords: mysql master slave proxy
 授权给从数据库服务器192.168.10.131  
 mysql> GRANT REPLICATION SLAVE ON *.* to 'rep1'@'192.168.10.131' identified by 'password';
 
-查询主数据库状态  
-
-mysql> show master status;  
+查询主数据库状态    
+mysql> show master status;    
 +------------------+----------+--------------+------------------+  
 | File | Position | Binlog_Do_DB | Binlog_Ignore_DB |  
 +------------------+----------+--------------+------------------+  
@@ -57,12 +56,12 @@ mysql> show master status;
 /opt/mysql/bin/mysql -uroot -p'new-password'
 
 执行同步SQL语句  
-mysql> change master to
-master_host='192.168.10.130',
-master_user='rep1',
-master_password='password',
-master_log_file='mysql-bin.000005',
-master_log_pos=261;
+mysql> change master to  
+master_host='192.168.10.130',  
+master_user='rep1',  
+master_password='password',  
+master_log_file='mysql-bin.000005',  
+master_log_pos=261;  
 
 正确执行后启动Slave同步进程  
 mysql> start slave;
@@ -71,22 +70,22 @@ mysql> start slave;
 mysql> show slave status\G
 
 ==============================================  
-Slave_IO_State:
-Master_Host: 192.168.10.130
-Master_User: rep1
-Master_Port: 3306
-Connect_Retry: 60
-Master_Log_File: mysql-bin.000005
-Read_Master_Log_Pos: 415
-Relay_Log_File: localhost-relay-bin.000008
-Relay_Log_Pos: 561
-Relay_Master_Log_File: mysql-bin.000005
-Slave_IO_Running: YES
-Slave_SQL_Running: YES
-Replicate_Do_DB:
-……………省略若干……………
-Master_Server_Id: 1
-1 row in set (0.01 sec)
+Slave_IO_State:  
+Master_Host: 192.168.10.130  
+Master_User: rep1  
+Master_Port: 3306  
+Connect_Retry: 60  
+Master_Log_File: mysql-bin.000005  
+Read_Master_Log_Pos: 415  
+Relay_Log_File: localhost-relay-bin.000008  
+Relay_Log_Pos: 561  
+Relay_Master_Log_File: mysql-bin.000005  
+Slave_IO_Running: YES  
+Slave_SQL_Running: YES  
+Replicate_Do_DB:  
+……………省略若干……………  
+Master_Server_Id: 1  
+1 row in set (0.01 sec)  
 ==============================================  
 
 其中Slave_IO_Running 与 Slave_SQL_Running 的值都必须为YES，才表明状态正常。
@@ -124,9 +123,8 @@ Query Ok, 1 row affected (0.00 sec)
 mysql> insert into first_tb values (001,’myself’);  
 Query Ok, 1 row affected (0.00 sec)  
 
-在从服务器上查看
-
-mysql> show databases;  
+在从服务器上查看  
+mysql> show databases;   
 =============================  
 +--------------------+  
 | Database |  
@@ -155,8 +153,8 @@ mysql> show tables;
 =============================  
 
 数据库表first_tb也已经自动创建  
-
-mysql> select * from first_tb;  
+mysql> select * from first_tb;
+    
 =============================  
 +------+------+  
 | id | name |  
