@@ -35,7 +35,9 @@ keywords: mysql master slave proxy
 mysql> GRANT REPLICATION SLAVE ON *.* to 'rep1'@'192.168.10.131' identified by 'password';
 
 查询主数据库状态
-Mysql> show master status;
+
+mysql> show master status;
+
 +------------------+----------+--------------+------------------+
 | File | Position | Binlog_Do_DB | Binlog_Ignore_DB |
 +------------------+----------+--------------+------------------+
@@ -70,6 +72,7 @@ mysql> start slave;
 mysql> show slave status\G
 
 ==============================================
+
 Slave_IO_State:
 Master_Host: 192.168.10.130
 Master_User: rep1
@@ -91,6 +94,7 @@ Master_Server_Id: 1
 其中Slave_IO_Running 与 Slave_SQL_Running 的值都必须为YES，才表明状态正常。
 
 如果主服务器已经存在应用数据，则在进行主从复制时，需要做以下处理：
+
 (1)主数据库进行锁表操作，不让数据再进行写入动作
 mysql> FLUSH TABLES WITH READ LOCK;
 
@@ -108,20 +112,29 @@ mysql> UNLOCK TABLES;
 主服务器上的操作
 
 在主服务器上创建数据库first_db
+
 mysql> create database first_db;
+
 Query Ok, 1 row affected (0.01 sec)
 
 在主服务器上创建表first_tb
+
 mysql> create table first_tb(id int(3),name char(10));
+
 Query Ok, 1 row affected (0.00 sec)
 
 在主服务器上的表first_tb中插入记录
+
 mysql> insert into first_tb values (001,’myself’);
+
 Query Ok, 1 row affected (0.00 sec)
 
 在从服务器上查看
+
 mysql> show databases;
+
 =============================
+
 +--------------------+
 | Database |
 +--------------------+
@@ -132,32 +145,42 @@ mysql> show databases;
 | test |
 +--------------------+
 5 rows in set (0.01 sec)
+
 =============================
+
 数据库first_db已经自动生成
 
 mysql> use first_db
 Database chaged
 
 mysql> show tables;
+
 =============================
+
 +--------------------+
 | Tables_in_first_db |
 +--------------------+
 | first_tb |
 +--------------------+
 1 row in set (0.02 sec)
+
 =============================
+
 数据库表first_tb也已经自动创建
 
 mysql> select * from first_tb;
+
 =============================
+
 +------+------+
 | id | name |
 +------+------+
 | 1 | myself |
 +------+------+
 1 rows in set (0.00 sec)
+
 =============================
+
 记录也已经存在
 
 由此，整个MySQL主从复制的过程就完成了，接下来，我们进行MySQL读写分离的安装与配置。
