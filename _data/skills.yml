@@ -3,25 +3,32 @@
       - Java
       - C/C++
       - C#
-      - html5/css/js
+      - html5/css/js/es5/es6
       - PHP
       - Python
       - sql
+      - shell
 
 - name: 前沿工具技术
   keywords:
       - Docker
       - Git/SVN
       - Hbase/Mysql/MongoDb/Oracle/ActorDb/Redis 
-      - Kafka
+      - Kafka/MQ
       - flume
+      - Rsync
+      - Mysql-proxy
+      - Elasticsearch/kibana/x-pack
+      - Webpack/Parcel
 
 - name: 开发框架
   keywords:
       - restful API
       - Nodejs
       - Vue.js
-      - Webpack
       - jquery
       - bootstrap
+      - wordpress
+      - express
+      - koa2
       
