@@ -27,23 +27,20 @@ keywords: kafka zookeeper
 
 ## 配置程序
 
-1. 修改server.properties文件 
-
-+ broker.id：确保每个节点该值不同 
-+ port：kafka提供其他节点或者client访问的端口 
-+ log.dir：kafka数据文件存放的位置 
-+ advertised.listeners=PLAINTEXT://10.14.84.221:9092 
-+ log.cleaner.enable：设置是否启动日志清理过程 
-+ zookeeper.connect：设置zookeeper地址与端口 
-
-2. 修改zookeeper.properties文件（只在启动zookeeper的机器上配置） 
-
-+ dataDir：设置zookeeper持久化数据存放路径 
-+ clientPort：设置zookeeper的端口号 
++ 修改server.properties文件 
+- broker.id：确保每个节点该值不同 
+- port：kafka提供其他节点或者client访问的端口 
+- log.dir：kafka数据文件存放的位置 
+- advertised.listeners=PLAINTEXT://10.14.84.221:9092 
+- log.cleaner.enable：设置是否启动日志清理过程 
+- zookeeper.connect：设置zookeeper地址与端口 
++ 修改zookeeper.properties文件（只在启动zookeeper的机器上配置） 
+- dataDir：设置zookeeper持久化数据存放路径 
+- clientPort：设置zookeeper的端口号 
 
 ## 启功程序 
 
-1. 启动zookeeper 
++ 启动zookeeper 
 选kafka机器节点中的一个节点启动zookeeper，命令为 
 ```
 ./bin/zookeeper‐server‐startup.sh ./config/zookeeper.properties
@@ -55,10 +52,10 @@ keywords: kafka zookeeper
 
 ## 遇到问题
 
-1. Failed add leader to partition
++ Failed add leader to partition 
 有些kafka服务器所有的端口没有开放，在centos7中使用firewall-cmd命令开放相应端口
   
 
-### 可能会出现的问题
+## 可能会出现的问题
 
 java\scala版本不兼容 
