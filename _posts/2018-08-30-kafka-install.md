@@ -28,15 +28,15 @@ keywords: kafka zookeeper
 ## 配置程序
 
 + 修改server.properties文件   
-+ broker.id：确保每个节点该值不同 
-+ port：kafka提供其他节点或者client访问的端口 
-+ log.dir：kafka数据文件存放的位置 
-+ advertised.listeners=PLAINTEXT://10.14.84.221:9092 
-+ log.cleaner.enable：设置是否启动日志清理过程 
-+ zookeeper.connect：设置zookeeper地址与端口 
+    + broker.id：确保每个节点该值不同 
+    + port：kafka提供其他节点或者client访问的端口 
+    + log.dir：kafka数据文件存放的位置 
+    + advertised.listeners=PLAINTEXT://10.14.84.221:9092 
+    + log.cleaner.enable：设置是否启动日志清理过程 
+    + zookeeper.connect：设置zookeeper地址与端口 
 + 修改zookeeper.properties文件（只在启动zookeeper的机器上配置）   
-+ dataDir：设置zookeeper持久化数据存放路径 
-+ clientPort：设置zookeeper的端口号 
+    + dataDir：设置zookeeper持久化数据存放路径 
+    + clientPort：设置zookeeper的端口号 
 
 ## 启功程序 
 
@@ -45,7 +45,7 @@ keywords: kafka zookeeper
 ```
 ./bin/zookeeper‐server‐startup.sh ./config/zookeeper.properties
 ```
-在所有节点中启动kafka，命令为 
++ 在所有节点中启动kafka，命令为 
 ```
 ./bin/kafka‐server‐startup.sh ./config/server.properties
 ```
